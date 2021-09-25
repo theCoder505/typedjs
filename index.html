@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- poppins font  -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+    </style>
+
+
+    <style>
+        #holder {
+            max-width: 600px;
+            background: #fce8d1;
+            margin: 0px auto;
+            padding: 20px 15px;
+        }
+
+
+        #holder {
+            color: #334929;
+            font-size: 27px;
+            font-family: 'Poppins', Medium;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1.2;
+        }
+
+        .textTyper {
+            color: #FAA12E;
+        }
+
+        @media screen and (max-width: 600px) {
+            #holder{
+                font-size: 24px;
+            }
+        }
+    </style>
+    <title>Typer Js</title>
+</head>
+
+<body>
+
+
+
+
+    <div id="holder">
+
+        <span class="normalTxt">
+            &nbsp;&nbsp; We help tech, SaaS & cloud businesses 
+            communicate better with their
+        </span>
+
+        <span class="textTyper"></span>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="typed.min.js"></script>
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            $(".textTyper").typer({
+
+                strings: [
+                    "subscribers",
+                    "users",
+                    "customers",
+                    "teams",
+                    "clients",
+                    "partners",
+                    "investors",
+                ],
+
+                typeSpeed: 80,
+
+                backspaceSpeed: 50,
+
+                backspaceDelay: 700,
+
+                repeatDelay: 300,
+
+                repeat: true,
+
+                autoStart: true,
+
+                startDelay: 100,
+
+                useCursor: true
+
+            });
+
+
+
+
+
+        });
+
+    </script>
+</body>
+
+</html>

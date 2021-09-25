@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pure CSS/CSS3 Stopwatch</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <style>
+    /************CSS Calss Style**************/
+
+
+    section {
+      width: 600px;
+      margin: 150px auto;
+      font-family: 'roboto', sans-serif;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .stopwatch {
+      text-align: center;
+    }
+
+    .stopwatch .cell {
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      overflow: hidden;
+      display: inline-block;
+    }
+
+    .stopwatch .cell .num {
+      font-size: 35px;
+      line-height: 35px;
+      color: #444;
+      display: block;
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused;
+    }
+
+    .control {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .control label {
+      border: 1px solid;
+      font-size: 24px;
+      font-weight: 600;
+      padding: 10px;
+      margin: 0 10px;
+      display: inline-block;
+      cursor: pointer;
+      width: 83px;
+      letter-spacing: 1px;
+      transition: all 1s ease-in-out;
+    }
+
+    .control label[for="start"] {
+      color: #3DA23A;
+    }
+
+    .control label[for="stop"] {
+      color: #CC181E;
+    }
+
+    .control label[for="reset"] {
+      color: #5FD3F0;
+    }
+
+    /************CSS Calss Animation**************/
+
+    .ten {
+      -webkit-animation-name: ten;
+      -moz-animation-name: ten;
+      -o-animation-name: ten;
+      animation-name: ten;
+      -webkit-animation-timing-function: steps(10);
+      -moz-animation-timing-function: steps(10);
+      -o-animation-timing-function: steps(10);
+      animation-timing-function: steps(10);
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    }
+
+    @-webkit-keyframes ten {
+      0% {
+        margin-top: 0;
+      }
+
+      100% {
+        margin-top: -350px;
+      }
+    }
+
+    @-moz-keyframes ten {
+      0% {
+        margin-top: 0;
+      }
+
+      100% {
+        margin-top: -350px;
+      }
+    }
+
+    @-o-keyframes ten {
+      0% {
+        margin-top: 0;
+      }
+
+      100% {
+        margin-top: -350px;
+      }
+    }
+
+    @keyframes ten {
+      0% {
+        margin-top: 0;
+      }
+
+      100% {
+        margin-top: -350px;
+      }
+    }
+
+    .sex {
+      -webkit-animation-name: sex;
+      -moz-animation-name: sex;
+      -o-animation-name: sex;
+      animation-name: sex;
+      -webkit-animation-timing-function: steps(6);
+      -moz-animation-timing-function: steps(6);
+      -o-animation-timing-function: steps(6);
+      animation-timing-function: steps(6);
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    }
+
+    @-webkit-keyframes sex {
+      0% {
+        margin-top: 0;
+      }
+
+      100% {
+        margin-top: -210px;
+      }
+    }
+
+    @-moz-keyframes sex {
+      0% {
+        margin-top: 0;
+      }
+
+      100% {
+        margin-top: -210px;
+      }
+    }
+
+    @-o-keyframes sex {
+      0% {
+        margin-top: 0;
+      }
+
+      100% {
+        margin-top: -210px;
+      }
+    }
+
+    @keyframes sex {
+      0% {
+        margin-top: 0;
+      }
+
+      100% {
+        margin-top: -210px;
+      }
+    }
+
+    .mill {
+      -webkit-animation-duration: 0.01s;
+      -moz-animation-duration: 0.01s;
+      -o-animation-duration: 0.01s;
+      animation-duration: 0.01s;
+    }
+
+    .ten_mill {
+      -webkit-animation-duration: 0.1s;
+      -moz-animation-duration: 0.1s;
+      -o-animation-duration: 0.1s;
+      animation-duration: 0.1s;
+    }
+
+    .hund_mill {
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+      -o-animation-duration: 1s;
+      animation-duration: 1s;
+    }
+
+    .sec {
+      -webkit-animation-duration: 10s;
+      -moz-animation-duration: 10s;
+      -o-animation-duration: 10s;
+      animation-duration: 10s;
+    }
+
+    .ten_sec {
+      -webkit-animation-duration: 60s;
+      -moz-animation-duration: 60s;
+      -o-animation-duration: 60s;
+      animation-duration: 60s;
+    }
+
+    .minu {
+      -webkit-animation-duration: 600s;
+      -moz-animation-duration: 600s;
+      -o-animation-duration: 600s;
+      animation-duration: 600s;
+    }
+
+    .ten_minu {
+      -webkit-animation-duration: 3600s;
+      -moz-animation-duration: 3600s;
+      -o-animation-duration: 3600s;
+      animation-duration: 3600s;
+    }
+
+    .hour {
+      -webkit-animation-duration: 36000s;
+      -moz-animation-duration: 36000s;
+      -o-animation-duration: 36000s;
+      animation-duration: 36000s;
+    }
+
+    .ten_hour {
+      -webkit-animation-duration: 360000;
+      -moz-animation-duration: 360000;
+      -o-animation-duration: 360000;
+      animation-duration: 360000;
+    }
+
+    /************CSS Calss Play**************/
+
+    #start:checked~.stopwatch .num {
+      -webkit-animation-play-state: running;
+      -moz-animation-play-state: running;
+      -o-animation-play-state: running;
+      animation-play-state: running;
+    }
+
+    #stop:checked~.stopwatch .num {
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused;
+    }
+
+    #reset:checked~.stopwatch .num {
+      -webkit-animatione: none;
+      -moz-animation: none;
+      -o-animation: none;
+      animation: none;
+    }
+  </style>
+  <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <section>
+    <h1 style="text-align:center;">Pure CSS/CSS3 Stopwatch</h1>
+    <input type="radio" name="controls" id="start">
+    <input type="radio" name="controls" id="stop">
+    <input type="radio" name="controls" id="reset">
+
+
+    <div class="stopwatch">
+      <div class="cell"> <span class="num ten ten_hour">0 1 2 3 4 5 6 7 8 9</span> </div>
+      <div class="cell"> <span class="num ten hour">0 1 2 3 4 5 6 7 8 9</span> </div>
+      <div class="cell"> <span class="num">:</span> </div>
+      <div class="cell"> <span class="num sex ten_minu">0 1 2 3 4 5</span> </div>
+      <div class="cell"> <span class="num ten minu">0 1 2 3 4 5 6 7 8 9</span> </div>
+      <div class="cell"> <span class="num">:</span> </div>
+      <div class="cell"> <span class="num sex ten_sec">0 1 2 3 4 5</span> </div>
+      <div class="cell"> <span class="num ten sec">0 1 2 3 4 5 6 7 8 9</span> </div>
+      <div class="cell"> <span class="num">:</span> </div>
+      <div class="cell"> <span class="num ten hund_mill">0 1 2 3 4 5 6 7 8 9</span> </div>
+      <div class="cell"> <span class="num ten ten_mill">0 1 2 3 4 5 6 7 8 9</span> </div>
+      <div class="cell"> <span class="num ten mill">0 1 2 3 4 5 6 7 8 9</span> </div>
+    </div>
+
+
+    <div class="control">
+      <label for="start">Start</label>
+      <label for="stop">Stop</label>
+      <label for="reset">Reset</label>
+    </div>
+  </section>
+
+
+
+  
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-46156385-1', 'cssscript.com');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        #mouseDownDiv {
+            background-color: black;
+            color: white;
+            padding: 50px;
+            margin: 20px auto;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        #timer {
+            color: red;
+            background-color: black;
+            margin: 20px auto;
+            max-width: 100px;
+            font-size: 20px;
+            padding: 15px 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="timer">
+        0Hr 0Mint
+    </div>
+
+    <div id="mouseDownDiv">
+        MouseDown
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+
+
+        var i = 0;
+        function myInterval() {
+            i = i + 1;
+            $("#timer").html(i);
+        }
+
+
+        $("#mouseDownDiv").mousedown(function () {
+            var setIntModel = setInterval(myInterval, 1000);
+
+            $("#mouseDownDiv").mouseup(function () {
+                i = 0;
+                clearInterval(setIntModel);
+            });
+
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
